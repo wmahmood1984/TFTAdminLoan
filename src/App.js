@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Home from './Pages/Home'
+import { Routes, Route} from 'react-router'
+import InstantBuy from './Pages/InstantBuy'
+import Staking from './Pages/Staking'
+import Loan from './Pages/Loan'
+export default function App() {
+    return (
+    
+        <div className="App">
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes >
+      <Route path="/" element={<Home ></Home>}></Route>
+
+      <Route path="InstantBuy" element={<InstantBuy></InstantBuy>}></Route>
+      <Route path="staking" element={<Staking></Staking>}></Route>
+      <Route path="loan" element={<Loan></Loan>}></Route>
+
+
+    </Routes>
+    
+
+    
+    
+        </div>)
 }
-
-export default App;
