@@ -47,6 +47,8 @@ export default function InstantBuy() {
     return  state.adoptReducer.BUSDAllowance; 
    
    });
+
+   console.log("allowance",_BUSDAllowance)
    
    const _USDTAllowance = useSelector((state)=>{
     return  state.adoptReducer.USDTAllowance; 
@@ -170,7 +172,7 @@ console.log("Address",_address)
       <p>We will give you {( Number(_BUSDTFT)/100000000*(100+Number(_discount))/100).toFixed(2)}</p>
       <button 
       disabled={BNB>0}
-      onClick={Invest}>{Number(_USDTAllowance/1000000000000000000) >= BUSD ?  "Invest" : "Approve"}</button>
+      onClick={Invest}>{Number(_USDTAllowance/1000000000000000000) >= USDT?  "Invest" : "Approve"}</button>
       </div>
       
        
